@@ -1,2 +1,2 @@
 # angular4-wechat-demo
-a angular4 demo for wecha cp suite
+a fronted demo for wecha cp suite,backend demo upload later.
