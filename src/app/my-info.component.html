@@ -1,0 +1,31 @@
+<div class="weui-cells__title">
+    详细信息</div>
+<div class="weui-cells weui-cells_form" *ngIf="myinfo">
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">卡号</label></div>
+        <div class="weui-cell__bd">
+            <label class="weui-label">{{myinfo.userId}}</label>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+        <div class="weui-cell__bd">
+            <label class="weui-label">{{myinfo.name}}</label>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="" class="weui-label">座位</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" value="" placeholder="请输入座位信息" />
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="" class="weui-label">电话</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" value="" placeholder="请输入电话号码" />
+        </div>
+    </div>
+    <div class="weui-btn-area">
+        <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
+    </div>
+</div>

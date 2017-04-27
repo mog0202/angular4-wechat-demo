@@ -1,0 +1,131 @@
+body {
+    color: #222;
+    height: 100%;
+    background: #3b4756;
+    font: 14px/1.5 "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0; 
+    display: block;
+}
+html {
+    height: 100%;
+}
+
+.mod-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+}
+.mod-frame__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    z-index: 2;
+    background-color: #344257;
+}
+.mod-frame__nav-header {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #2A3648;
+}
+.mod-frame__nav-logo img{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+.mod-frame__nav-name {
+    margin-left: 10px;
+    margin-right: 3px;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+    color: #AFBACC;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    max-width: 200px;
+}
+.mod-frame__nav-body {
+    margin-top: 30px;
+}
+.mod-frame__nav-footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 16px;
+}
+
+.mod-frame__container {
+    background-color: #fff;
+    position: absolute;
+    left: 220px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+.col_main {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.col_mainInner {
+    position: relative;
+    height: 100%;
+}
+.tool_bar {
+    position: relative;
+    height: 49px;
+    line-height: 49px;
+    padding: 0 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    background: #eaeaea;
+    background: -webkit-linear-gradient(top,#f3f3f3,#eee);
+    background: -moz-linear-gradient(top,#f3f3f3,#eee);
+    background: linear-gradient(top,#f3f33f,#eee);
+}
+.default_view {
+    overflow-y: auto;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.mod-frame__menu li {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.mod-frame__menu li a {
+    display: block;
+    color: #AFBACC;
+}
+.mod-frame__menu li a:hover{
+    text-decoration:none;
+}
+.mod-frame__nav-name a {
+    display: block;
+    color: #AFBACC;
+}

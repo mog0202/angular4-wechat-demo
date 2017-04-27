@@ -1,0 +1,105 @@
+<div class="col_main">
+  <div class="col_mainInner">
+    <div class="tool_bar">
+      {{title}}
+    </div>
+    <div class="default_view">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-outline-success" (click)="andNew()"><i class="fa fa-address-card-o" title="新增成员"></i>&nbsp; 新增成员</button>
+              <button type="button" class="btn btn-outline-success" *ngIf="removeFlg" (click)="delete()"><i class="fa fa-times" title="删除"></i>&nbsp; 删除</button>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="pull-right">
+              <form class="form-inline">
+                <input class="form-control" type="text" placeholder="姓名或卡号" #contentStr>
+                <button class="btn btn-outline-success " (click)="getUser(contentStr.value)" type="button"><i class="fa fa-search" title="查询"></i>&nbsp; 查询</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <table class="table table-hover table-bordered">
+            <thead class="thead-default">
+              <th>#</th>
+              <th>corpId</th>
+              <th>卡号</th>
+              <th>姓名</th>
+              <th>座位</th>
+              <th>电话</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users;let idx=index" (click)="onSelect(user)" [class.selected]="user === selectedUser">
+                <th>{{idx+1}}</th>
+                <td>{{user.corpId}}</td>
+                <td>{{user.userId}}</td>
+                <td>{{user.userName}}</td>
+                <td>{{user.seatNo}}</td>
+                <td>{{user.telephone}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <form #userForm="ngForm" [hidden]="!newFlg">
+          <div class="form-group row">
+            <label for="userId" class="col-1 col-form-label">卡号</label>
+            <div class="col-11">
+              <input type="text" class="form-control" id="userId" required [(ngModel)]="newUser.userId" name="userId" #userId="ngModel">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="userName" class="col-1 col-form-label">姓名</label>
+            <div class="col-11">
+              <input type="text" class="form-control" id="userName" required [(ngModel)]="newUser.userName" name="userName" #userName="ngModel">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="seatNo" class="col-1 col-form-label">座位</label>
+            <div class="col-11">
+              <input type="text" class="form-control" id="seatNo" required [(ngModel)]="newUser.seatNo" name="seatNo" #seatNo="ngModel">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="telephone" class="col-1 col-form-label">电话</label>
+            <div class="col-11">
+              <input type="text" class="form-control" id="telephone" required [(ngModel)]="newUser.telephone" name="telephone" #telephone="ngModel">
+            </div>
+          </div>
+        </form>
+        <form #userForm="ngForm" [hidden]="!removeFlg">
+          <div class="form-group row">
+            <label for="userId" class="col-1 col-form-label">卡号</label>
+            <div class="col-11">
+              <input type="text" class="form-control" id="userId" required [(ngModel)]="selectedUser.userId" name="userId" #userId="ngModel">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="userName" class="col-1 col-form-label">姓名</label>
+            <div class="col-11">
+              <input type="text" class="form-control" id="userName" required [(ngModel)]="selectedUser.userName" name="userName" #userName="ngModel">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="seatNo" class="col-1 col-form-label">座位</label>
+            <div class="col-11">
+              <input type="text" class="form-control" id="seatNo" required [(ngModel)]="selectedUser.seatNo" name="seatNo" #seatNo="ngModel">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="telephone" class="col-1 col-form-label">电话</label>
+            <div class="col-11">
+              <input type="text" class="form-control" id="telephone" required [(ngModel)]="selectedUser.telephone" name="telephone" #telephone="ngModel">
+            </div>
+          </div>
+        </form>
+        <div class="btn-group" role="group">
+          <button (click)="add()" class="btn btn-outline-success" [hidden]="!newFlg"><i class="fa fa-floppy-o" title="保存"></i>&nbsp; 保存</button>
+          <button (click)="update()" class="btn btn-outline-success" [hidden]="!removeFlg"><i class="fa fa-floppy-o" title="修改"></i>&nbsp; 修改</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

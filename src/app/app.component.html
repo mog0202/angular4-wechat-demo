@@ -1,0 +1,38 @@
+<div class="mod-frame">
+  <div class="mod-frame__nav">
+    <div class="mod-frame__nav-header">
+      <a routerLink="/home" routerLinkActive="active" class="mod-frame__nav-logo">
+        <img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM4ickfaTicfibObTr4HAibXu15sOvicib9nmaalv62AeXhbArYg/0" title="公司名称">
+      </a>
+      <h1 class="mod-frame__nav-name">
+        <i class="fa fa-weixin" aria-hidden="true"></i>&nbsp; 管理系统
+      </h1>
+    </div>
+    <div class="mod-frame__nav-body">
+      <div class="list-group">
+        <a class="list-group-item" routerLink="/user"><i class="fa fa-user fa-fw"></i>&nbsp; 员工信息</a>
+        <a class="list-group-item" routerLink="/home"><i class="fa fa-cog fa-fw"></i>&nbsp; 设置</a>
+      </div>
+    </div>
+    <div class="mod-frame__nav-footer">
+      <div class="btn-group pull-center">
+        <a class="btn btn-default" routerLink="/home">
+          <i class="fa fa-home" title="首页"></i>
+        </a>
+        <a class="btn btn-default" href="https://qy.weixin.qq.com/cgi-bin/3rd_loginpage?from=agentcenter" target="_blank">
+          <i class="fa fa-shopping-cart" title="第三方应用"></i>
+        </a>
+        <a class="btn btn-default" href="http://qydev.weixin.qq.com/qa/index.php?qa=questions" target="_blank">
+          <i class="fa fa-question" title="退出"></i>
+        </a>
+        <a class="btn btn-default" href="#" (click)="logOut()">
+          <i class="fa fa-sign-out" title="退出"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="mod-frame__container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<!--<router-outlet></router-outlet>-->
